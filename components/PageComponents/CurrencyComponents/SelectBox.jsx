@@ -25,10 +25,10 @@ const SelectBox = ({ options, name, value, flagSelect, handleChange }) => {
             .includes(query.toLowerCase().replace(/\s+/g, ""))
         );
   return (
-    <div className=" w-80">
+    <div className=" w-80 ">
       <Combobox value={value} name={name} onChange={handleChange}>
-        <div className="relative mt-1">
-          <div className="flex relative w-full cursor-default  bg-white text-lg py-2 border border-black pl-3 pr-10 text-left  focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
+        <div className="relative mt-1 ">
+          <div className="flex bg-white relative w-full cursor-default  bg-white text-lg py-2 border border-black pl-3 pr-10 text-left  focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
             <div className="flex justify-center items-center">
               <span className={`currency-flag currency-flag-${flagSelect}`} />
             </div>

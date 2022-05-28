@@ -8,6 +8,7 @@ import { convert, getDate } from "../services/utils";
 import { api } from "../services/api";
 import HeadSeo from "../components/HeadSeo";
 import currencyData from "../lib/currencies.json";
+import TitlePage from "../components/PageComponents/TitlePage";
 const API_KEY = "0cf6ddbb42c906d3887063fc";
 
 
@@ -101,13 +102,14 @@ const CurrencyConverter = ({ currencies, defaultCurrencyCode }) => {
     <HeadSeo title={"Chuyen Doi Tien"}/>
       <Layout>
         <div className=" pt-28 max-w-3xl m-auto">
+          <TitlePage>Chuyển đổi tiền tệ</TitlePage>
           <input
             type="number"
             min="0"
             value={firstCurrencyValue}
             onChange={(e) => handleValueChange(e.target.value, conversionRates)}
             ref={initialRef}
-            className="w-full px-3 py-5 text-3xl border border-black focus:border-blue-500 dark:focus:border-blue-400 focus:ring-blue-500 focus:ring-opacity-40 focus:outline-none focus:ring"
+            className="w-full px-3 py-5 text-3xl border border-black focus:shadow-blog-l  focus:outline-none focus:ring-none focus:translate-y-blog-4m hover:shadow-blog-l dark:hover:shadow-blog-d dark:hover:bg-gray-800 hover:translate-y-blog-4m hover:translate-x-blog-4p  ease-in duration-200"
           />
           <div className="w-full mt-4 flex justify-between">
             <div>
@@ -122,7 +124,7 @@ const CurrencyConverter = ({ currencies, defaultCurrencyCode }) => {
               />
             </div>
             <div className="flex justify-center items-center">
-              <button   onClick={handleSwapCurrencies} className="p-3 hover:bg-gray-100 border border-gray-600">
+              <button   onClick={handleSwapCurrencies} className="p-3 bg-white hover:bg-gray-50 border border-gray-600">
                 <SwitchHorizontalIcon className="h-6 w-6" />
               </button>
             </div>
@@ -139,13 +141,13 @@ const CurrencyConverter = ({ currencies, defaultCurrencyCode }) => {
             </div>
           </div>
           <div className="flex mt-10 justify-between">
-            <div className="text-xl">
+            <div className="text-xl w-96">
               {firstCurrencyValue} {firstCurrency?.label}{" "}
             </div>
             <div>
               <ArrowRightIcon className="h-6 w-6" />
             </div>
-            <div className="text-xl flex">
+            <div className="text-xl w-96 text-right ">
               {/* <span
                 className={`currency-flag currency-flag-${secondCurrency.value}`}
               /> */}
@@ -161,4 +163,5 @@ const CurrencyConverter = ({ currencies, defaultCurrencyCode }) => {
     </>
   );
 };
+
 export default CurrencyConverter;
