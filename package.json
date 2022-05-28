@@ -1,0 +1,39 @@
+{
+  "name": "congcu",
+  "version": "0.1.0",
+  "private": true,
+  "main": "function.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build && next export",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "@headlessui/react": "^1.6.3",
+    "@heroicons/react": "^1.0.6",
+    "@mui/material": "^5.8.1",
+    "axios": "^0.27.2",
+    "currency-flags": "^3.2.1",
+    "firebase-functions": "^3.21.2",
+    "heic-convert": "^1.2.4",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.1",
+    "next": "^12.0.4",
+    "react": "18.1.0",
+    "react-dom": "18.1.0",
+    "styled-components": "^5.3.5",
+    "swr": "^1.0.1",
+    "util": "^0.12.4",
+    "xterm": "^4.18.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.7",
+    "eslint": "8.15.0",
+    "eslint-config-next": "12.1.6",
+    "postcss": "^8.4.13",
+    "tailwindcss": "^3.0.24"
+  }
+}
