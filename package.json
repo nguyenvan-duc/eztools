@@ -5,7 +5,7 @@
   "main": "function.js",
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
+    "build": "next build ",
     "start": "next start",
     "lint": "next lint"
   },
@@ -17,7 +17,6 @@
     "@mui/material": "^5.8.1",
     "axios": "^0.27.2",
     "currency-flags": "^3.2.1",
-    "firebase-functions": "^3.21.2",
     "heic-convert": "^1.2.4",
     "lodash": "^4.17.21",
     "moment": "^2.29.1",
