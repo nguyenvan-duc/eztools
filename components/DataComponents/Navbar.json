@@ -1,0 +1,23 @@
+[
+    
+    {
+        "title": "Chuyển Đổi",
+        "items": [
+          {
+            "name": "Chuyển đổi tiền tệ",
+            "href":"/currency-exchange",
+            "icon": ""
+          }
+        ]
+      },
+      {
+        "title": "Công Cụ",
+        "items": [
+          {
+            "name": "To-Do list",
+            "href":"/todo-list",
+            "icon": "todo-list"
+          }
+        ]
+      }
+]

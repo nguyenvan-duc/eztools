@@ -25,10 +25,10 @@ const SelectBox = ({ options, name, value, flagSelect, handleChange }) => {
             .includes(query.toLowerCase().replace(/\s+/g, ""))
         );
   return (
-    <div className=" w-80 ">
+    <div className="w-full lg:w-80 ">
       <Combobox value={value} name={name} onChange={handleChange}>
         <div className="relative mt-1 ">
-          <div className="flex bg-white relative w-full cursor-default  bg-white text-lg py-2 border border-black pl-3 pr-10 text-left  focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
+          <div className="flex  relative w-full cursor-default  bg-white text-lg py-2 border border-black pl-3 pr-10 text-left  focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
             <div className="flex justify-center items-center">
               <span className={`currency-flag currency-flag-${flagSelect}`} />
             </div>
@@ -51,7 +51,7 @@ const SelectBox = ({ options, name, value, flagSelect, handleChange }) => {
             leaveTo="opacity-0"
             afterLeave={() => setQuery("")}
           >
-            <Combobox.Options className="absolute mt-1 max-h-60 w-full overflow-auto border border-black bg-white py-1 text-base  ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+            <Combobox.Options className="absolute mt-1 max-h-60 z-30 w-full overflow-auto border border-black bg-white py-1 text-base  ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
               {filteredCountry?.length === 0 && query !== "" ? (
                 <div className="relative cursor-default select-none py-2 px-4 text-gray-700">
                   Nothing found.

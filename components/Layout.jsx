@@ -1,10 +1,12 @@
 import React from "react";
 import Footer from "./Footer";
+import Navbar from "./Navbar";
 import Siderbar from "./Siderbar";
 
 const Layout = (props) => {
   return (
     <>
+    <Navbar/>
       <div className="flex  flex-no-wrap">
         <Siderbar />
         <div className="bg-codecademy w-full">

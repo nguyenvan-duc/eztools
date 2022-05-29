@@ -1,17 +1,8 @@
 import React from "react";
 import Link from "next/link";
-const navbarLink = [
-  {
-    title: "Chuyển Đổi",
-    items: [
-      {
-        name: "Chuyển Đổi Tiền Tệ",
-        href: "/currency-exchange",
-        icon: "",
-      },
-    ],
-  },
-];
+import NavbarLink from "./DataComponents/Navbar.json";
+
+
 const siderbarLink = [
   {
     name: "Trang chủ",
@@ -27,7 +18,7 @@ const siderbarLink = [
 const Siderbar = () => {
   return (
     <div>
-      <div className="flex flex-col w-64  px-4 py-8 min-h-screen bg-white border-r  border-black dark:bg-gray-800 dark:border-gray-600">
+      <div className="hidden flex-col w-64  lg:flex  px-4 py-8 min-h-screen bg-white border-r  border-black dark:bg-gray-800 dark:border-gray-600">
         <h2 className="text-3xl font-semibold text-gray-800 dark:text-white">
           7TH.DEC
         </h2>
@@ -67,8 +58,8 @@ const Siderbar = () => {
             ))}
             <hr className="my-6 border-gray-200 dark:border-gray-600" />
 
-            {navbarLink.map((item, index) => (
-              <>
+            {NavbarLink.map((item, index) => (
+              <div key={index}>
                 <h2 className="text-lg font-medium">{item.title}</h2>
                 {item.items.map((itemlink, index) => (
                   <Link href={itemlink.href} key={index}>
@@ -78,7 +69,7 @@ const Siderbar = () => {
                   </Link>
                 ))}
                 <hr className="my-6 border-gray-200 dark:border-gray-600" />
-              </>
+              </div>
             ))}
             <a
               href="https://policies.google.com/privacy"

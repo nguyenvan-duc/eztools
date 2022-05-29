@@ -2,6 +2,7 @@ import { ArrowRightIcon, SwitchHorizontalIcon } from "@heroicons/react/solid";
 import React, { useRef, useEffect, useState } from "react";
 import useSWR from "swr";
 import _ from "lodash";
+import CurrencyFormat from "react-currency-format";
 import Layout from "../components/Layout";
 import SelectBox from "../components/PageComponents/CurrencyComponents/SelectBox";
 import { convert, getDate } from "../services/utils";
@@ -10,7 +11,6 @@ import HeadSeo from "../components/HeadSeo";
 import currencyData from "../lib/currencies.json";
 import TitlePage from "../components/PageComponents/TitlePage";
 const API_KEY = "0cf6ddbb42c906d3887063fc";
-
 
 export async function getServerSideProps({ query }) {
   const response = await api().get(`/v6/${API_KEY}/latest/USD`);
@@ -73,7 +73,7 @@ const CurrencyConverter = ({ currencies, defaultCurrencyCode }) => {
   }, [firstCurrencyData]);
 
   useEffect(() => {
-    initialRef?.current?.focus()
+    initialRef?.current?.focus();
   }, []);
 
   const handleValueChange = (value, conversionRates) => {
@@ -87,7 +87,10 @@ const CurrencyConverter = ({ currencies, defaultCurrencyCode }) => {
     callback(event);
     if (action === "secondCurrency") {
       setSecondCurrencyValue(
-        convert(firstCurrencyValue, conversionRates[event?.value?.toUpperCase()])
+        convert(
+          firstCurrencyValue,
+          conversionRates[event?.value?.toUpperCase()]
+        )
       );
     }
   };
@@ -99,7 +102,7 @@ const CurrencyConverter = ({ currencies, defaultCurrencyCode }) => {
 
   return (
     <>
-    <HeadSeo title={"Chuyen Doi Tien"}/>
+      <HeadSeo title={"Chuyen Doi Tien"} />
       <Layout>
         <div className=" pt-28 max-w-3xl m-auto">
           <TitlePage>Chuyển đổi tiền tệ</TitlePage>
@@ -111,20 +114,24 @@ const CurrencyConverter = ({ currencies, defaultCurrencyCode }) => {
             ref={initialRef}
             className="w-full px-3 py-5 text-3xl border border-black focus:shadow-blog-l  focus:outline-none focus:ring-none focus:translate-y-blog-4m hover:shadow-blog-l dark:hover:shadow-blog-d dark:hover:bg-gray-800 hover:translate-y-blog-4m hover:translate-x-blog-4p  ease-in duration-200"
           />
-          <div className="w-full mt-4 flex justify-between">
+          <div className="w-full mt-4 lg:flex lg:justify-between">
             <div>
               <SelectBox
                 name="firstCurrency"
                 value={firstCurrency}
                 flagSelect={firstCurrency?.value}
                 options={currencies}
-                handleChange={(event=firstCurrency?.value, action="firstCurrency") =>
-                  handleCurrencyChange({ event, action }, setFirstCurrency)
-                }
+                handleChange={(
+                  event = firstCurrency?.value,
+                  action = "firstCurrency"
+                ) => handleCurrencyChange({ event, action }, setFirstCurrency)}
               />
             </div>
-            <div className="flex justify-center items-center">
-              <button   onClick={handleSwapCurrencies} className="p-3 bg-white hover:bg-gray-50 border border-gray-600">
+            <div className="flex justify-center items-center mt-3 mb-2 lg:mb-2 lg:mt-0">
+              <button
+                onClick={handleSwapCurrencies}
+                className="p-3 bg-white hover:bg-gray-50 border border-gray-600"
+              >
                 <SwitchHorizontalIcon className="h-6 w-6" />
               </button>
             </div>
@@ -134,29 +141,41 @@ const CurrencyConverter = ({ currencies, defaultCurrencyCode }) => {
                 name="secondCurrency"
                 flagSelect={secondCurrency?.value}
                 options={currencies}
-                handleChange={(event=secondCurrency?.value, action="secondCurrency") =>
-                  handleCurrencyChange({ event, action }, setSecondCurrency)
-                }
+                handleChange={(
+                  event = secondCurrency?.value,
+                  action = "secondCurrency"
+                ) => handleCurrencyChange({ event, action }, setSecondCurrency)}
               />
             </div>
           </div>
           <div className="flex mt-10 justify-between">
-            <div className="text-xl w-96">
-              {firstCurrencyValue} {firstCurrency?.label}{" "}
+            <div className="text-xl hidden md:block w-96">
+              <CurrencyFormat
+                value={firstCurrencyValue}
+                displayType={"text"}
+                thousandSeparator={true}
+              />
+              {firstCurrency?.label}{" "}
             </div>
-            <div>
+            <div className="hidden md:block">
               <ArrowRightIcon className="h-6 w-6" />
             </div>
             <div className="text-xl w-96 text-right ">
-              {/* <span
-                className={`currency-flag currency-flag-${secondCurrency.value}`}
-              /> */}
-              {secondCurrencyValue} {secondCurrency?.label}{" "}
+              <div className="font-medium block md:hidden">Kết Quả: </div>
+              <CurrencyFormat
+                value={secondCurrencyValue}
+                displayType={"text"}
+                thousandSeparator={true}
+              />{" "}
+              {secondCurrency?.label}
             </div>
           </div>
           <div className="border border-gray-300 bg-gray-300 w-full mt-4" />
           <div className="mt-3 text-gray-500 ">
-            <i>Cập nhật lần cuối vào: {getDate(firstCurrencyData?.time_last_update_utc)}</i>
+            <i>
+              Cập nhật lần cuối vào:{" "}
+              {getDate(firstCurrencyData?.time_last_update_utc)}
+            </i>
           </div>
         </div>
       </Layout>

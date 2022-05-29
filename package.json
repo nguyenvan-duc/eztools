@@ -21,11 +21,15 @@
     "lodash": "^4.17.21",
     "moment": "^2.29.1",
     "next": "^12.0.4",
-    "react": "18.1.0",
-    "react-dom": "18.1.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-beautiful-dnd-next": "^11.0.5",
+    "react-currency-format": "^1.1.0",
+   
     "styled-components": "^5.3.5",
     "swr": "^1.0.1",
     "util": "^0.12.4",
+    "uuid": "^8.3.2",
     "xterm": "^4.18.0"
   },
   "devDependencies": {
