@@ -7,6 +7,7 @@ import {
 } from "react-beautiful-dnd-next";
 import Item from "../components/PageComponents/TodoComponents/Item";
 import { v4 as uuidv4 } from "uuid";
+import TitlePage from "../components/PageComponents/TitlePage";
 
 const TodoList = () => {
   const initialState = () =>
@@ -128,11 +129,14 @@ const TodoList = () => {
   return (
     <>
       <Layout>
+      <TitlePage>Việc Cần Làm</TitlePage>
         <div className="max-w-lg bg-white  p-5 m-auto border border-black">
+         
           <div>
             <textarea
               value={newTask}
               ref={inputRef}
+              placeholder="Nhập công việc cần làm"
               onChange={handleChange}
               className="w-full px-2 py-3 text-xl border outline-none border-black mt-3"
             />
@@ -144,7 +148,12 @@ const TodoList = () => {
                 >
                   Sửa nội dung
                 </button>
-                <button onClick={handleCancel} className="p-2 border mt-2 text-white border-black bg-red-600 hover:bg-red-500">Hủy</button>
+                <button
+                  onClick={handleCancel}
+                  className="p-2 border mt-2 text-white border-black bg-red-600 hover:bg-red-500"
+                >
+                  Hủy
+                </button>
               </div>
             ) : (
               <button
@@ -156,49 +165,49 @@ const TodoList = () => {
             )}
           </div>
           <div className="mt-10">
-              {tasks.length > 0 ? (
- <DragDropContext onDragEnd={handleOnDragEnd}>
- <Droppable droppableId="characters">
-   {(provided) => (
-     <ul {...provided.droppableProps} ref={provided.innerRef}>
-       {tasks.map(
-         ({ id, desc, completed, dateCreated,dateCompleted }, index) => {
-           return (
-             <Draggable key={id} draggableId={id} index={index}>
-               {(provided) => (
-                 <li
-                   className="mb-2"
-                   ref={provided.innerRef}
-                   {...provided.draggableProps}
-                   {...provided.dragHandleProps}
-                 >
-                   <Item
-                     id={id}
-                     handleCheck={handleCheck}
-                     desc={desc}
-                     dateCreated={dateCreated}
-                     completed={completed}
-                     handleDelete={handleDelete}
-                     handleEdit={handleEdit}
-                     dateCompleted={dateCompleted}
-                   />
-                 </li>
-               )}
-             </Draggable>
-           );
-         }
-       )}
-       {provided.placeholder}
-     </ul>
-   )}
- </Droppable>
-</DragDropContext>
-              ):
-              (
-                  <div className="text-center">Không có việc nào cho hôm nay.</div>
-              )
-              }
-           
+            {tasks.length > 0 ? (
+              <DragDropContext onDragEnd={handleOnDragEnd}>
+                <Droppable droppableId="characters">
+                  {(provided) => (
+                    <ul {...provided.droppableProps} ref={provided.innerRef}>
+                      {tasks.map(
+                        (
+                          { id, desc, completed, dateCreated, dateCompleted },
+                          index
+                        ) => {
+                          return (
+                            <Draggable key={id} draggableId={id} index={index}>
+                              {(provided) => (
+                                <li
+                                  className="mb-2"
+                                  ref={provided.innerRef}
+                                  {...provided.draggableProps}
+                                  {...provided.dragHandleProps}
+                                >
+                                  <Item
+                                    id={id}
+                                    handleCheck={handleCheck}
+                                    desc={desc}
+                                    dateCreated={dateCreated}
+                                    completed={completed}
+                                    handleDelete={handleDelete}
+                                    handleEdit={handleEdit}
+                                    dateCompleted={dateCompleted}
+                                  />
+                                </li>
+                              )}
+                            </Draggable>
+                          );
+                        }
+                      )}
+                      {provided.placeholder}
+                    </ul>
+                  )}
+                </Droppable>
+              </DragDropContext>
+            ) : (
+              <div className="text-center">Khong Co Gi ¯\_(ツ)_/¯.</div>
+            )}
           </div>
         </div>
       </Layout>

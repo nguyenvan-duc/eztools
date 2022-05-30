@@ -14,7 +14,7 @@
         "title": "Công Cụ",
         "items": [
           {
-            "name": "To-Do list",
+            "name": "Việc Cần Làm",
             "href":"/todo-list",
             "icon": "todo-list"
           }
