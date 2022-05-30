@@ -17,6 +17,10 @@
             "name": "Việc Cần Làm",
             "href":"/todo-list",
             "icon": "todo-list"
+          },{
+            "name": "Tạo QR Code",
+            "href":"/qr-code",
+            "icon": ""
           }
         ]
       }

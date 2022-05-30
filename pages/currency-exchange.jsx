@@ -104,7 +104,7 @@ const CurrencyConverter = ({ currencies, defaultCurrencyCode }) => {
     <>
       <HeadSeo title={"Chuyen Doi Tien"} />
       <Layout>
-        <div className=" pt-28 max-w-3xl m-auto">
+        <div className=" pt-16 lg:pt-28 max-w-3xl m-auto">
           <TitlePage>Chuyển đổi tiền tệ</TitlePage>
           <input
             type="number"
@@ -112,7 +112,7 @@ const CurrencyConverter = ({ currencies, defaultCurrencyCode }) => {
             value={firstCurrencyValue}
             onChange={(e) => handleValueChange(e.target.value, conversionRates)}
             ref={initialRef}
-            className="w-full px-3 py-5 text-3xl border border-black focus:shadow-blog-l  focus:outline-none focus:ring-none focus:translate-y-blog-4m hover:shadow-blog-l dark:hover:shadow-blog-d dark:hover:bg-gray-800 hover:translate-y-blog-4m hover:translate-x-blog-4p  ease-in duration-200"
+            className="w-full textMono px-3 py-5 text-3xl border border-black focus:shadow-blog-l  focus:outline-none focus:ring-none focus:translate-y-blog-4m hover:shadow-blog-l dark:hover:shadow-blog-d dark:hover:bg-gray-800 hover:translate-y-blog-4m hover:translate-x-blog-4p  ease-in duration-200"
           />
           <div className="w-full mt-4 lg:flex lg:justify-between">
             <div>
@@ -126,11 +126,12 @@ const CurrencyConverter = ({ currencies, defaultCurrencyCode }) => {
                   action = "firstCurrency"
                 ) => handleCurrencyChange({ event, action }, setFirstCurrency)}
               />
+              <h6 className="mt-1 text-xs text-gray-500 italic">* Có thể nhập để tìm kiếm.</h6>
             </div>
-            <div className="flex justify-center items-center mt-3 mb-2 lg:mb-2 lg:mt-0">
+            <div className="flex justify-center items-center  ">
               <button
                 onClick={handleSwapCurrencies}
-                className="p-3 bg-white hover:bg-gray-50 border border-gray-600"
+                className="p-3 lg:mb-6 mt-2 mb-3 bg-white hover:bg-gray-50 border border-gray-600"
               >
                 <SwitchHorizontalIcon className="h-6 w-6" />
               </button>
@@ -149,18 +150,18 @@ const CurrencyConverter = ({ currencies, defaultCurrencyCode }) => {
             </div>
           </div>
           <div className="flex mt-10 justify-between">
-            <div className="text-xl hidden md:block w-96">
+            <div className="text-xl textMono hidden md:block w-96">
               <CurrencyFormat
                 value={firstCurrencyValue}
                 displayType={"text"}
                 thousandSeparator={true}
-              />
+              />{" "}
               {firstCurrency?.label}{" "}
             </div>
             <div className="hidden md:block">
               <ArrowRightIcon className="h-6 w-6" />
             </div>
-            <div className="text-xl w-96 text-right ">
+            <div className="text-xl textMono w-96 text-right ">
               <div className="font-medium block md:hidden">Kết Quả: </div>
               <CurrencyFormat
                 value={secondCurrencyValue}
@@ -173,7 +174,7 @@ const CurrencyConverter = ({ currencies, defaultCurrencyCode }) => {
           <div className="border border-gray-300 bg-gray-300 w-full mt-4" />
           <div className="mt-3 text-gray-500 ">
             <i>
-              Cập nhật lần cuối vào:{" "}
+              Cập nhật tỷ giá lần cuối vào:{" "}
               {getDate(firstCurrencyData?.time_last_update_utc)}
             </i>
           </div>

@@ -63,7 +63,7 @@ const Siderbar = () => {
                 <h2 className="text-lg font-medium">{item.title}</h2>
                 {item.items.map((itemlink, index) => (
                   <Link href={itemlink.href} key={index}>
-                    <a className="flex items-center px-2 hover:underline hover:px-4 py-2 mt-5 text-gray-800 transition-colors duration-200 transform     dark:hover:text-gray-200 hover:text-gray-900">
+                    <a className="flex items-center px-2 hover:underline hover:px-4 py-1 mt-2 text-gray-800 transition-colors duration-200 transform     dark:hover:text-gray-200 hover:text-gray-900">
                       {itemlink.name}
                     </a>
                   </Link>
