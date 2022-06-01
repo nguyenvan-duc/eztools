@@ -22,7 +22,7 @@ const TextNotes = () => {
       <Layout>
       <TitlePage>Ghi chú văn bản</TitlePage>
         <div className="  max-w-5xl p-3 border border-black bg-white m-auto">
-          <textarea  onChange={handleChange} spellCheck="true" value={TextNotes} placeholder="Nhập nội dung" rows={20}  className="w-full outline-none border border-black p-3 min-h-fit text-lg textMono"/>
+          <textarea  onChange={handleChange} spellCheck="true" value={TextNotes} placeholder="Nhập nội dung" rows={20}   className="w-full outline-none border min-h-250 border-black p-3 min-h-fit text-lg textMono"/>
         </div>
       </Layout>
     </>
