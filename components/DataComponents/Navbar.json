@@ -18,8 +18,16 @@
             "href":"/todo-list",
             "icon": "todo-list"
           },{
+            "name": "Ghi Chú",
+            "href":"/text-notes",
+            "icon": ""
+          },{
             "name": "Tạo QR Code",
             "href":"/qr-code",
+            "icon": ""
+          },{
+            "name": "Xóa nền",
+            "href":"/remove-bg",
             "icon": ""
           }
         ]
