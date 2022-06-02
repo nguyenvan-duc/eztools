@@ -22,6 +22,10 @@
             "href":"/text-notes",
             "icon": ""
           },{
+            "name": "Ghi Chú Markdown",
+            "href":"/markdown-notes",
+            "icon": ""
+          },{
             "name": "Tạo QR Code",
             "href":"/qr-code",
             "icon": ""

@@ -5,7 +5,9 @@ import { api } from "../services/api"
 import Button from '@mui/material/Button';
 import Snackbar from '@mui/material/Snackbar';
 import IconButton from '@mui/material/IconButton';
-import "currency-flags/dist/currency-flags.min.css"
+import "currency-flags/dist/currency-flags.min.css";
+import "@uiw/react-md-editor/markdown-editor.css";
+import "@uiw/react-markdown-preview/markdown.css";
 function MyApp({ Component, pageProps }) {
   const [open, setOpen] = React.useState(false);
 

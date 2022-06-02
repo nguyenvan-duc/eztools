@@ -5,7 +5,6 @@ import moment from 'moment';
 import Moment from 'react-moment';
 const TextNotes = () => {
   const [TextNotes,setTextNotes] = React.useState('')
-  const [Time,setTime] = React.useState('')
   let date = new Date();
   let dateTimeNow = `${date.getDate()}-${
     date.getMonth() + 1
@@ -31,7 +30,6 @@ const TextNotes = () => {
     })
     setTextNotes(JSON.parse(textNotesData))
     localStorage.setItem('textNotes',textNotesData)
-    console.log(TextNotes.textNotes)
   }
   return (
     <>
@@ -43,7 +41,7 @@ const TextNotes = () => {
             </span>
           <textarea  onChange={handleChange} spellCheck="true" value={TextNotes.textNotes} placeholder="Nhập nội dung" rows={20}   className="w-full outline-none border min-h-250 border-black p-3 min-h-fit text-lg textMono"/>
           <div className="flex justify-between items-center">
-            <span>Thay đổi lần cuối lúc: {TextNotes?.date}</span>
+            <span>Thay đổi lần cuối lúc: {TextNotes.date}</span>
             <span>{TextNotes?.textNotes?.length}</span>
           </div>
         </div>
