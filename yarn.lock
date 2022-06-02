@@ -2367,6 +2367,16 @@ react-is@^17.0.2:
   resolved "https://registry.npmjs.org/react-is/-/react-is-17.0.2.tgz"
   integrity sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==
 
+react-live-clock@^5.10.0:
+  version "5.10.0"
+  resolved "https://registry.yarnpkg.com/react-live-clock/-/react-live-clock-5.10.0.tgz#9b8f06edf3200ce8a400cff46e2c7dd6a5e1967f"
+  integrity sha512-fP7mwABotJuGFZ7eJ0QaMMxMX5niO23Oi4hfVi9x/6ktMdmVWH5oMmflDRz91QEczQDFjvkX3AzHGP2TM+XnOg==
+
+react-moment@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/react-moment/-/react-moment-1.1.2.tgz#a9b157c58ddd226a2f746e5ca43415b24a17b6af"
+  integrity sha512-lfb+shYXI2tXlQrNUpNr05/1D/kzFj8Isbfp89DQrpZk0fs2JIAnLHWETR0hQS9zvtzwLWlVv0wKLffbue5HoA==
+
 react-redux@^7.0.3:
   version "7.2.8"
   resolved "https://registry.npmjs.org/react-redux/-/react-redux-7.2.8.tgz"
