@@ -14,19 +14,19 @@
         "title": "Công Cụ",
         "items": [
           {
-            "name": "Việc Cần Làm",
+            "name": "Việc cần làm",
             "href":"/todo-list",
             "icon": "todo-list"
           },{
-            "name": "Ghi Chú",
+            "name": "Ghi chú",
             "href":"/text-notes",
             "icon": ""
           },{
-            "name": "Ghi Chú Markdown",
+            "name": "Ghi chú markdown",
             "href":"/markdown-notes",
             "icon": ""
           },{
-            "name": "Tạo QR Code",
+            "name": "Tạo Qr code",
             "href":"/qr-code",
             "icon": ""
           },{
