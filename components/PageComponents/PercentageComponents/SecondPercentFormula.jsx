@@ -25,7 +25,7 @@ const SecondPercentFormula = () => {
             placeholder="Nhập x%"
           />
         </div>
-        <span className="text-lg mb-3 md:mb-0">là bao nhiêu % của</span>
+        <span className="text-lg mb-3 md:mr-3 md:mb-0">là bao nhiêu % của</span>
         <div className="w-full md:w-1/3 ">
           <input
             onChange={(value) => setInputTwo(value.target.value)}
