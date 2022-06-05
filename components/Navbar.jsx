@@ -7,6 +7,12 @@ import { useRouter } from "next/router";
 const navigation = [
   { name: "Trang Chủ", href: "/", current: true },
   { name: "Giới Thiệu", href: "/about/", current: false },
+  ,
+  {
+    name: "Đóng góp ý kiên",
+    href: "/feedback/",
+    current: false,
+  },
 ];
 
 function classNames(...classes) {
@@ -27,7 +33,7 @@ const Navbar = () => {
               </div>
               <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex-shrink-0 flex items-center">
-                 <h1 className="textMono text-xl font-semibold">7TH.DEC</h1>
+                  <h1 className="textMono text-xl font-semibold">7TH.DEC</h1>
                 </div>
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
@@ -45,13 +51,15 @@ const Navbar = () => {
           <div className="md:flex md:justify-end p-1">
             <Disclosure.Panel className="lg:hidden bg-white border md:w-80 max-h-[90vh]  overflow-x-auto border-black ">
               <div className="px-2 pb-3 space-y-1 mt-2">
-                {navigation.map((item,index) => (
+                {navigation.map((item, index) => (
                   <Disclosure.Button
                     key={index}
                     as="a"
                     href={item.href}
                     className={classNames(
-                      asPath == item.href ? "border-l border-black" : "text-gray-800",
+                      asPath == item.href
+                        ? "border-l border-black"
+                        : "text-gray-800",
                       "block px-3 py-2  text-base font-medium"
                     )}
                     aria-current={item.current ? "page" : undefined}

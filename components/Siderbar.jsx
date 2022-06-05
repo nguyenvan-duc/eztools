@@ -13,7 +13,11 @@ const siderbarLink = [
     name: "Giới thiệu",
     href: "/about/",
     icon: "",
-  },
+  }, {
+    name: "Đóng góp ý kiên",
+    href: "/feedback/",
+    icon: "",
+  }
 ];
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");

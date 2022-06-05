@@ -13,9 +13,10 @@ const SecondPercentFormula = () => {
   }, [inputOne, inputTwo]);
   return (
     <div className="w-full border mb-6 textMono p-4 border-black bg-white forcus:shadow-blog-l hover:shadow-blog-l focus:translate-y-blog-4m ease-in duration-200">
-      <h1 className="mb-2 text-lg font-semibold">
+      <span className="mb-2 text-xl bg-black text-white">
         Tính x là bao nhiêu % của a:
-      </h1>
+      </span>
+      <h1 className="mb-2 mt-3">Công thức: (x * 100) / a   </h1>
       <div className="flex flex-wrap m-auto items-center">
         <div className="w-full mb-3 md:mb-0 md:w-1/3 md:mr-4">
           <input

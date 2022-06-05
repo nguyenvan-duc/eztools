@@ -18,9 +18,11 @@ const ThirdPercentFormula = () => {
   }, [inputOne, inputTwo, selected]);
   return (
     <div className="w-full border mb-6 textMono p-4 border-black bg-white forcus:shadow-blog-l hover:shadow-blog-l focus:translate-y-blog-4m ease-in duration-200">
-      <h1 className="mb-2 text-lg font-semibold">
-        Tính phần trăm của giá trị thay đổi:
-      </h1>
+      <span className="mb-2 text-xl bg-black text-white">
+        Tính phần trăm của giá trị thay đổi :
+      </span>
+      <h3 className="mt-3">Công thức tăng: a + (a * x / 100)  </h3>
+      <h3 className="mb-2 ">Công thức giảm: a - (a * x / 100)  </h3>
       <div className="flex flex-wrap m-auto items-center">
         <div className="w-full mb-3 md:mb-0 flex items-center md:w-1/4 mr-4">
           <input
