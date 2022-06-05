@@ -4,7 +4,7 @@ import { MenuAlt4Icon } from "@heroicons/react/outline";
 const ThirdPercentFormula = () => {
   const [inputOne, setInputOne] = React.useState(0);
   const [inputTwo, setInputTwo] = React.useState(0);
-  const [selected, setSelected] = React.useState(null);
+  const [selected, setSelected] = React.useState('up');
   const [result, setResult] = React.useState(0);
 
   React.useEffect(() => {
