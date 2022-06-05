@@ -37,11 +37,11 @@ const TodoList = () => {
         ...tasks,
         {
           id: uuidv4(),
-          desc: newTas  k,
+          desc: newTask,
           completed: false,
           dateCreated: dateTimeNow,
-          dateCompleted: null,
-        },
+          dateCompleted: null
+        }
       ];
       setTasks((prevState) => (prevState = newTaskArr));
       setNewTask("");

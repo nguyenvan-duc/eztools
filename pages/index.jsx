@@ -8,6 +8,10 @@ import NavbarLink from "../components/DataComponents/Navbar.json";
 import Link from "next/link";
 export default function Home() {
   const [search, setSearch] = useState("");
+  const [checkEmpty, setCheckEmpty] = useState(false);
+  const handleSearch = (value) => {
+    setSearch(value);
+  };
   return (
     <>
       <HeadSeo title={"home"} />
@@ -15,7 +19,7 @@ export default function Home() {
         <div className=" max-w-6xl m-auto">
           <div className="flex justify-center mt-20 lg:pt-6">
             <input
-              onChange={(value) => setSearch(value.target.value)}
+              onChange={(value) => handleSearch(value.target.value)}
               className="border textMono border-black w-full py-5 text-3xl px-6 max-w-4xl m-auto outline-none rounded-full shadow-blog-l"
               placeholder="Nhập từ khóa để tìm kiếm công cụ..."
             />
@@ -27,6 +31,7 @@ export default function Home() {
                   .toLocaleLowerCase()
                   .includes(search.toLocaleLowerCase())
               );
+
               return (
                 <>
                   {filterItems.length > 0 && (
