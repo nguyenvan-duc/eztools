@@ -37,7 +37,7 @@ const TodoList = () => {
         ...tasks,
         {
           id: uuidv4(),
-          desc: newTask,
+          desc: newTas  k,
           completed: false,
           dateCreated: dateTimeNow,
           dateCompleted: null,

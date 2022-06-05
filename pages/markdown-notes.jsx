@@ -117,6 +117,16 @@ const MarkdownNotes = () => {
     setTextNotes(JSON.parse(textNotesData));
     localStorage.setItem("textNotesMarkdown", textNotesData);
   };
+  const downloadTxtFile = () => {
+    const element = document.createElement("a");
+    const file = new Blob([TextNotes.textNotes], {
+      type: "text/plain"
+    });
+    element.href = URL.createObjectURL(file);
+    element.download = "markdown.md";
+    document.body.appendChild(element);
+    element.click();
+  };
   return (
     <>
       <Layout>
@@ -130,6 +140,9 @@ const MarkdownNotes = () => {
               Hướng đẫn markdown
             </a>
           </Link>
+        </div>
+        <div className="max-w-5xl mx-auto border border-black mb-3 p-3">
+        <button onClick={downloadTxtFile}>Download MD</button>
         </div>
         <div className="  max-w-5xl p-3 border border-black bg-white m-auto">
           <span>

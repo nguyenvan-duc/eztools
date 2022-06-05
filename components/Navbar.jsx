@@ -3,6 +3,7 @@ import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
 import NavbarLink from "./DataComponents/Navbar.json";
 import _ from "lodash";
+import { useRouter } from "next/router";
 const navigation = [
   { name: "Trang Chủ", href: "/", current: true },
   { name: "Giới Thiệu", href: "#", current: false },
@@ -13,6 +14,8 @@ function classNames(...classes) {
 }
 
 const Navbar = () => {
+  const router = useRouter();
+  const { asPath } = router;
   return (
     <Disclosure as="nav" className="blog w-full fixed lg:hidden z-30">
       {({ open }) => (
@@ -52,7 +55,7 @@ const Navbar = () => {
                     as="a"
                     href={item.href}
                     className={classNames(
-                      item.current ? "border-l border-black" : "text-gray-800",
+                      asPath == item.href ? "border-l border-black" : "text-gray-800",
                       "block px-3 py-2  text-base font-medium"
                     )}
                     aria-current={item.current ? "page" : undefined}
@@ -70,12 +73,12 @@ const Navbar = () => {
                         as="a"
                         href={item.href}
                         className={classNames(
-                          item.current
+                          asPath == item.href
                             ? "border-l border-black"
                             : "text-gray-800",
                           "block px-3 py-2 ml-2  text-base font-medium"
                         )}
-                        aria-current={item.current ? "page" : undefined}
+                        aria-current={asPath == item.href ? "page" : undefined}
                       >
                         {item.name}
                       </Disclosure.Button>

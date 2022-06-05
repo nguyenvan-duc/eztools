@@ -5,8 +5,9 @@
         "items": [
           {
             "name": "Chuyển đổi tiền tệ",
-            "href":"/currency-exchange",
-            "icon": ""
+            "href":"/currency-exchange/",
+            "icon": "",
+            "desc":"Chức năng như tên."
           }
         ]
       },
@@ -15,24 +16,29 @@
         "items": [
           {
             "name": "Việc cần làm",
-            "href":"/todo-list",
-            "icon": "todo-list"
+            "href":"/todo-list/",
+            "icon": "todo-list/",
+            "desc":"Giống như ghi chú nhưng mà kiểu todo-list."
           },{
             "name": "Ghi chú",
-            "href":"/text-notes",
-            "icon": ""
+            "href":"/text-notes/",
+            "icon": "",
+            "desc":"Chức năng như tên."
           },{
             "name": "Ghi chú markdown",
-            "href":"/markdown-notes",
-            "icon": ""
+            "href":"/markdown-notes/",
+            "icon": "",
+            "desc":"Cũng là ghi chú nhưng mà kiểu markdown."
           },{
             "name": "Tạo Qr code",
-            "href":"/qr-code",
+            "href":"/qr-code/",
             "icon": ""
+            ,"desc":"Chức năng như tên."
           },{
             "name": "Xóa nền",
-            "href":"/remove-bg",
-            "icon": ""
+            "href":"/remove-bg/",
+            "icon": "",
+            "desc":"Chức năng như tên."
           }
         ]
       }

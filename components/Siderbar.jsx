@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import NavbarLink from "./DataComponents/Navbar.json";
-
+import { useRouter } from "next/router";
 
 const siderbarLink = [
   {
@@ -11,14 +11,20 @@ const siderbarLink = [
   },
   {
     name: "Giới thiệu",
-    href: "/about",
+    href: "/about/",
     icon: "",
   },
 ];
+function classNames(...classes) {
+  return classes.filter(Boolean).join(" ");
+}
+
 const Siderbar = () => {
+  const router = useRouter();
+  const { asPath } = router;
   return (
     <div>
-      <div className="hidden flex-col w-64  lg:flex  px-4 py-8 min-h-screen bg-white border-r  border-black dark:bg-gray-800 dark:border-gray-600">
+      <div className="hidden flex-col w-64  lg:flex  px-4 py-8 min-h-screen bg-white  dark:bg-gray-800 dark:border-gray-600">
         <h2 className="text-3xl font-semibold text-gray-800 dark:text-white">
           7TH.DEC
         </h2>
@@ -51,7 +57,12 @@ const Siderbar = () => {
           <nav>
             {siderbarLink.map((item, index) => (
               <Link href={item.href} key={index}>
-                <a className="flex items-center px-2 hover:underline hover:px-4 py-2 mt-5 text-gray-800 transition-colors duration-200 transform     dark:hover:text-gray-200 hover:text-gray-900">
+                <a
+                   className={classNames(
+                    asPath === item.href ? "border-l border-black" : "text-gray-800",
+                    "flex items-center px-2 hover:underline hover:px-4  mt-5 text-gray-800 transition-colors duration-200 transformdark:hover:text-gray-200 hover:text-gray-900"
+                  )}
+                >
                   {item.name}
                 </a>
               </Link>
@@ -63,7 +74,12 @@ const Siderbar = () => {
                 <h2 className="text-lg font-medium">{item.title}</h2>
                 {item.items.map((itemlink, index) => (
                   <Link href={itemlink.href} key={index}>
-                    <a className="flex items-center px-2 hover:underline hover:px-4 py-1 mt-2 text-gray-800 transition-colors duration-200 transform     dark:hover:text-gray-200 hover:text-gray-900">
+                    <a
+                       className={classNames(
+                        asPath === itemlink.href ? "border-l border-black" : "text-gray-800",
+                        "flex items-center px-2 hover:underline hover:px-4  mt-5 text-gray-800 transition-colors duration-200 transformdark:hover:text-gray-200 hover:text-gray-900"
+                      )}
+                    >
                       {itemlink.name}
                     </a>
                   </Link>
