@@ -30,6 +30,11 @@
             "icon": "",
             "desc":"Cũng là ghi chú nhưng mà kiểu markdown."
           },{
+            "name": "Tính tỉ lệ %",
+            "href":"/percentity/",
+            "icon": ""
+            ,"desc":"Công cụ tính % nhanh (có công thức)."
+          },{
             "name": "Tạo Qr code",
             "href":"/qr-code/",
             "icon": ""
