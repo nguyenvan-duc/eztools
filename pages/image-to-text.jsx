@@ -5,6 +5,7 @@ import { createWorker } from "tesseract.js";
 import preprocessImage from "../utils/preprocess";
 import { toast, Toaster } from "react-hot-toast";
 import { Listbox, Transition } from "@headlessui/react";
+import TitlePage from "../components/PageComponents/TitlePage";
 import {
   CheckIcon,
   SelectorIcon,
@@ -98,6 +99,10 @@ const ImageToText = () => {
       <Toaster reverseOrder={false} />
       <HeadSeo title="Chuyển Đổi Hình Ảnh Sang Văn Bản" />
       <Layout>
+        <div className="mt-16">
+        <TitlePage>Chuyển Đổi Hình Ảnh Sang Văn Bản</TitlePage>
+
+        </div>
         <div className="max-w-5xl mb-3  m-auto border border-black bg-white">
           <div className="flex flex-wrap">
             <div className="w-1/5 border-r border-black">
