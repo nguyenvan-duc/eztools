@@ -1,18 +1,24 @@
 [
     
     {
-        "title": "Chuyển Đổi",
+        "title": "🚀 Chuyển Đổi",
         "items": [
           {
             "name": "Chuyển đổi tiền tệ",
             "href":"/currency-exchange/",
             "icon": "",
             "desc":"Chức năng như tên."
+          },
+          {
+            "name": "Chuyển ảnh sang văn bản",
+            "href":"/image-to-text/",
+            "icon": "",
+            "desc":"Công cụ giúp xuất các văn bản trong ảnh, và có thể coppy được."
           }
         ]
       },
       {
-        "title": "Công Cụ",
+        "title": "🛠 Công Cụ ",
         "items": [
           {
             "name": "Việc cần làm",

@@ -102,7 +102,7 @@ const CurrencyConverter = ({ currencies, defaultCurrencyCode }) => {
 
   return (
     <>
-      <HeadSeo title={"Chuyen Doi Tien"} />
+      <HeadSeo title={"Chuyển đổi tiền tệ 💱"} />
       <Layout>
         <div className=" pt-16 lg:pt-28 max-w-3xl m-auto">
           <TitlePage>Chuyển đổi tiền tệ</TitlePage>

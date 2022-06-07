@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import Layout from "../components/Layout";
+import HeadSeo from "../components/HeadSeo";
 import {
   DragDropContext,
   Droppable,
@@ -129,6 +130,7 @@ const TodoList = () => {
   return (
     <>
       <Layout>
+        <HeadSeo title="Việc cần làm 📌" />
         <div className="pt-16 lg:pt-28">
           <TitlePage>Việc Cần Làm</TitlePage>
           <div className="max-w-lg bg-white p-5 m-auto border border-black">

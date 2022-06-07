@@ -3,6 +3,7 @@ import Layout from "../components/Layout";
 import TitlePage from "../components/PageComponents/TitlePage";
 import moment from 'moment';
 import Moment from 'react-moment';
+import HeadSeo from "../components/HeadSeo";
 const TextNotes = () => {
   const [TextNotes,setTextNotes] = React.useState('')
   let date = new Date();
@@ -33,6 +34,7 @@ const TextNotes = () => {
   }
   return (
     <>
+    <HeadSeo title="Ghi Chú 📝" />
       <Layout>
       <TitlePage>Ghi chú văn bản</TitlePage>
         <div className="  max-w-5xl p-3 border border-black bg-white m-auto">

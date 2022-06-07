@@ -7,7 +7,10 @@ const QrCode = () => {
     <>
       <HeadSeo title="Tạo QR Code" />
       <Layout>
-        <div className="pt-16 lg:pt-28">
+      <div className="flex justify-center items-center text-center w-full min-h-screen">
+           <span className="textMono block font-medium text-4xl ">Đang Làm Nè =.=</span>
+       </div>
+        {/* <div className="pt-16 lg:pt-28">
           <div className="flex flex-row   m-auto max-w-5xl  ">
             <div className="w-3/5 h-full  flex justify-center items-center">
               <input
@@ -36,7 +39,7 @@ const QrCode = () => {
               </button>
             </div>
           </div>
-        </div>
+        </div> */}
       </Layout>
     </>
   );

@@ -1,9 +1,6 @@
 import React, {
-  useState,
   useRef,
   useEffect,
-  useCallback,
-  useMemo,
 } from "react";
 import Layout from "../components/Layout";
 import TitlePage from "../components/PageComponents/TitlePage";
@@ -12,6 +9,7 @@ import Moment from "react-moment";
 import dynamic from "next/dynamic";
 import mermaid from "mermaid";
 import Link from "next/link";
+import HeadSeo from "../components/HeadSeo";
 const MDEditor = dynamic(
   () => import("@uiw/react-md-editor").then((mod) => mod.default),
   { ssr: false }
@@ -129,7 +127,9 @@ const MarkdownNotes = () => {
   };
   return (
     <>
+    <HeadSeo title="Ghi chú Markdown📝"/>
       <Layout>
+
         <TitlePage>Ghi chú markdown</TitlePage>
         <div className="w-full text-center mb-2">
           <Link href={"https://www.markdownguide.org/cheat-sheet/"}>

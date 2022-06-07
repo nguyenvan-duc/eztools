@@ -29,11 +29,11 @@ const Siderbar = () => {
   return (
     <div>
       <div className="hidden flex-col w-64  lg:flex  px-4 py-8 min-h-screen bg-white  dark:bg-gray-800 dark:border-gray-600">
-        <h2 className="text-3xl font-semibold text-gray-800 dark:text-white">
+        <h2 className="text-3xl textMono font-semibold text-gray-800 dark:text-white">
           7TH.DEC
         </h2>
 
-        <div className="relative mt-6">
+        {/* <div className="relative mt-6">
           <span className="absolute inset-y-0 left-0 flex items-center pl-3">
             <svg
               className="w-5 h-5 text-gray-400"
@@ -55,7 +55,7 @@ const Siderbar = () => {
             className="w-full py-2 pl-10 pr-4 text-gray-700 bg-white border border-black dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-400 focus:ring-blue-500 focus:ring-opacity-40 focus:outline-none focus:ring"
             placeholder="Search"
           />
-        </div>
+        </div> */}
 
         <div className="flex flex-col justify-between flex-1 mt-6">
           <nav>
