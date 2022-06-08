@@ -102,7 +102,7 @@ const CurrencyConverter = ({ currencies, defaultCurrencyCode }) => {
 
   return (
     <>
-      <HeadSeo title={"Chuyển đổi tiền tệ 💱"} />
+      <HeadSeo title={"Chuyển đổi tiền tệ 💱"}  img="https://uploads-ssl.webflow.com/612a3d9cd9c35344a2460d68/62a0b9c773f7e0467c740fc8_Thi%E1%BA%BFt%20k%E1%BA%BF%20ch%C6%B0a%20c%C3%B3%20t%C3%AAn.png" />
       <Layout>
         <div className=" pt-16 lg:pt-28 max-w-3xl m-auto">
           <TitlePage>Chuyển đổi tiền tệ</TitlePage>

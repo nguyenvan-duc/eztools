@@ -97,7 +97,7 @@ const ImageToText = () => {
   return (
     <>
       <Toaster reverseOrder={false} />
-      <HeadSeo title="Chuyển Đổi Hình Ảnh Sang Văn Bản" />
+      <HeadSeo title="Chuyển Đổi Hình Ảnh Sang Văn Bản" img="https://res.cloudinary.com/blogcuaduc/image/upload/v1641128846/cua-toi/lrb6bfewy7uxne53w4fn.png" />
       <Layout>
         <div className="mt-16">
         <TitlePage>Chuyển Đổi Hình Ảnh Sang Văn Bản</TitlePage>

@@ -11,7 +11,7 @@ export default function Home() {
   };
   return (
     <>
-      <HeadSeo title={"Công cụ 🛠👀"} />
+      <HeadSeo title={"Công cụ 🛠👀"} img="https://uploads-ssl.webflow.com/612a3d9cd9c35344a2460d68/62a0bb3771d3d1a603f0a147_2.png" />
       <Layout>
         <div className=" max-w-6xl m-auto">
           <div className="flex justify-center mt-20 lg:pt-6">

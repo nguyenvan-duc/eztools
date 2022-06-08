@@ -127,7 +127,7 @@ const MarkdownNotes = () => {
   };
   return (
     <>
-    <HeadSeo title="Ghi chú Markdown📝"/>
+    <HeadSeo title="Ghi chú Markdown📝" img="https://uploads-ssl.webflow.com/612a3d9cd9c35344a2460d68/62a0ba333226e6176e9ba3a0_download.png"/>
       <Layout>
 
         <TitlePage>Ghi chú markdown</TitlePage>
