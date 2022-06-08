@@ -226,13 +226,13 @@ const ImageToText = () => {
             </button>
           )}
         </div>
-        <div className="max-w-5xl m-auto border border-black bg-white p-3">
+        <div className="max-w-5xl m-auto relative  border border-black bg-white p-3">
           {imagePath ? (
             <img
               alt={imagePath}
               src={imagePath}
               ref={imageRef}
-              className="w-full h-full object-cover  md:object-cover hidden lg:block"
+              className="w-full h-full object-contain  md:object-cover"
               role="img"
             />
           ) : (
