@@ -1,6 +1,6 @@
 function preprocessImage(canvas) {
     const ctx = canvas.getContext('2d');
-    const image = ctx.getImageData(1,1,canvas.width, canvas.height);
+    const image = ctx.getImageData(0,0,canvas.width, canvas.height);
     blurARGB(image.data, canvas, 0.5);
     // dilate(image.data, canvas, );
     invertColors(image.data);

@@ -51,16 +51,21 @@ const ImageToText = () => {
   const imageRef = useRef(null);
   const worker = createWorker();
   const handleChange = (event) => {
-    setImagePath(URL.createObjectURL(event.target.files[0]));
+    event.preventDefault();
+    if (typeof window !== "undefined") {
+      if (event.target.files.length !== 0) {
+        setImagePath(window.URL?.createObjectURL(event.target.files[0]));
+      }
+    }
   };
   const tesseract = () => {
-    if (imagePath == null || imagePath === "") {
+    if (imagePath == null || imagePath == "" || imagePath.length == 0) {
       toast.error("Vui Lòng Chọn Ảnh.");
     } else {
       setText("");
       const canvas = canvasRef.current;
-      canvas.width = imageRef.current?.width;
-      canvas.height = imageRef.current?.height;
+      canvas.width = 2500;
+      canvas.height = 3000;
       const ctx = canvas.getContext("2d");
       ctx.drawImage(imageRef.current, 0, 0);
       ctx.putImageData(preprocessImage(canvas), 0, 0);
@@ -84,57 +89,47 @@ const ImageToText = () => {
       });
     }
   };
-  const handleClick = () => {
+  const handleClick = (e) => {
+    e.preventDefault();
     tesseract();
   };
   function classNames(...classes) {
     return classes.filter(Boolean).join(" ");
   }
-  const clearData = async () => {
+  const clearData = async (e) => {
     setText("");
     setImagePath("");
+    canvasRef = null;
+    imageRef = null;
   };
   return (
     <>
       <Toaster reverseOrder={false} />
-      <HeadSeo title="Chuyển Đổi Hình Ảnh Sang Văn Bản" img="https://res.cloudinary.com/blogcuaduc/image/upload/v1641128846/cua-toi/lrb6bfewy7uxne53w4fn.png" />
+      <HeadSeo
+        title="Chuyển Đổi Hình Ảnh Sang Văn Bản"
+        img="https://res.cloudinary.com/blogcuaduc/image/upload/v1641128846/cua-toi/lrb6bfewy7uxne53w4fn.png"
+      />
       <Layout>
         <div className="mt-16">
-        <TitlePage>Chuyển Đổi Hình Ảnh Sang Văn Bản</TitlePage>
+          <TitlePage>Chuyển Đổi Hình Ảnh Sang Văn Bản</TitlePage>
+        </div>
 
-        </div>
-        <div className="max-w-5xl mb-3  m-auto border border-black bg-white">
-          <div className="flex flex-wrap">
-            <div className="w-1/5 border-r border-black">
-              <label
-                htmlFor="file-upload"
-                className="relative p-3 hover:bg-black hover:text-white w-full flex justify-center items-center cursor-pointer "
-              >
-                <span>Chọn Ảnh</span>
-                <input
-                  onChange={handleChange}
-                  onClick={clearData}
-                  type="file"
-                  accept=".png, .jpg, .jpeg"
-                  id="file-upload"
-                  name="file-upload"
-                  className="sr-only"
-                />
-              </label>
-            </div>
-            <div className="w-4/5 ">
-              <input
-                onFocus={clearData}
-                onChange={(value) => setImagePath(value.target.value)}
-                className="w-full px-3 py-3 outline-none"
-                type="text"
-                placeholder="Nhập đường link ảnh."
-                value={imagePath}
-              />
-            </div>
-          </div>{" "}
-        </div>
         <div className="max-w-5 mb-3 flex justify-center pr-8 items-center">
+          <label
+            htmlFor="file-upload"
+            className="relative py-2 px-8  border border-black  bg-white flex justify-center items-center cursor-pointer hover:shadow-blog-l hover:translate-y-blog-4m hover:translate-x-blog-4p  ease-in duration-200"
+          >
+            <span>Chọn Ảnh</span>
+            <input
+              onChange={handleChange}
+              onClick={clearData}
+              type="file"
+              accept=".png, .jpg, .jpeg"
+              id="file-upload"
+              name="file-upload"
+              className="sr-only"
+            />
+          </label>
           <Listbox value={selected} onChange={setSelected}>
             {({ open }) => (
               <>
@@ -248,21 +243,19 @@ const ImageToText = () => {
         </div>
         {text && (
           <div className="max-w-5xl border border-black p-3 bg-white m-auto mt-3">
+            <h3 className="text-center my-2 font-normal text-lg textMono">Có thể sẽ bị sai chính tả, vui lòng soát lại.</h3>
             <textarea
               rows={20}
-              className="w-full outline-none border p-3"
+              className="w-full text-lg border-gray-500 outline-none border p-3"
               value={text}
               onChange={(value) => setText(value.target.value)}
             />
           </div>
         )}
 
-        <canvas
-          className="hidden"
-          ref={canvasRef}
-          width={1000}
-          height={1000}
-        ></canvas>
+        <div className="max-w-5xl overflow-hidden hidden m-auto ">
+          <canvas ref={canvasRef}></canvas>
+        </div>
       </Layout>
     </>
   );
