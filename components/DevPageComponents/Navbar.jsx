@@ -27,8 +27,8 @@ const Navbar = () => {
               </Link>
             </li>
             {navbarData.items.map((item, index) => (
-              <li>
-                <Link key={index} href={item.href}>
+              <li key={index}>
+                <Link  href={item.href}>
                   <a
                     href="#"
                     className="block py-2 pr-4 pl-3 text-white  rounded md:bg-transparent  md:p-0 "

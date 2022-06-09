@@ -21,8 +21,8 @@
       "@components/*": [
         "./components/*"
       ],
-      "@constants/*": [
-        "constants/*"
+      "@core/*": [
+        "core/*"
       ],
       "@workers/*": [
         "workers/*"
