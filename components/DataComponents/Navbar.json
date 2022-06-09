@@ -52,5 +52,22 @@
             "desc":"Chức năng như tên."
           }
         ]
+      },
+      {
+        "title": "💻 Developer Tools ",
+        "items": [
+          {
+            "name": "Fake Data",
+            "href":"/dev-tools/fake-data/",
+            "icon": "todo-list/",
+            "desc":""
+          },
+          {
+            "name": "Html to Jsx",
+            "href":"/dev-tools/html-to-jsx/",
+            "icon": "",
+            "desc":""
+          }
+        ]
       }
 ]
