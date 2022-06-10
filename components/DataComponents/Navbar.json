@@ -30,12 +30,8 @@
             "href":"/text-notes/",
             "icon": "",
             "desc":"Chức năng như tên."
-          },{
-            "name": "Ghi chú markdown",
-            "href":"/markdown-notes/",
-            "icon": "",
-            "desc":"Cũng là ghi chú nhưng mà kiểu markdown."
-          },{
+          },
+          {
             "name": "Tính tỉ lệ %",
             "href":"/percentity/",
             "icon": ""
@@ -63,8 +59,8 @@
             "desc":""
           },
           {
-            "name": "Html to Jsx",
-            "href":"/dev-tools/html-to-jsx/",
+            "name": "Markdown editor",
+            "href":"/dev-tools/markdown-editor/",
             "icon": "",
             "desc":""
           }

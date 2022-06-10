@@ -3,7 +3,6 @@ import NavbarData from "../DataComponents/Navbar.json";
 import Link from "next/link";
 const Navbar = () => {
   const [navbarData, setNavbarData] = React.useState(NavbarData[2]);
-  console.log(navbarData);
   return (
     <nav className="bg-gray-800 py-2.5 dark:bg-gray-800">
       <div className="flex px-6 flex-wrap justify-between items-center mx-auto">

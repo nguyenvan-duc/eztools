@@ -1,7 +1,4 @@
-import React, {
-  useRef,
-  useEffect,
-} from "react";
+import React, { useRef, useEffect } from "react";
 import Layout from "../components/Layout";
 import TitlePage from "../components/PageComponents/TitlePage";
 import moment from "moment";
@@ -118,7 +115,7 @@ const MarkdownNotes = () => {
   const downloadTxtFile = () => {
     const element = document.createElement("a");
     const file = new Blob([TextNotes.textNotes], {
-      type: "text/plain"
+      type: "text/plain",
     });
     element.href = URL.createObjectURL(file);
     element.download = "markdown.md";
@@ -127,9 +124,11 @@ const MarkdownNotes = () => {
   };
   return (
     <>
-    <HeadSeo title="Ghi chú Markdown📝" img="https://uploads-ssl.webflow.com/612a3d9cd9c35344a2460d68/62a0ba333226e6176e9ba3a0_download.png"/>
+      <HeadSeo
+        title="Ghi chú Markdown📝"
+        img="https://uploads-ssl.webflow.com/612a3d9cd9c35344a2460d68/62a0ba333226e6176e9ba3a0_download.png"
+      />
       <Layout>
-
         <TitlePage>Ghi chú markdown</TitlePage>
         <div className="w-full text-center mb-2">
           <Link href={"https://www.markdownguide.org/cheat-sheet/"}>
@@ -142,7 +141,7 @@ const MarkdownNotes = () => {
           </Link>
         </div>
         <div className="max-w-5xl mx-auto border border-black mb-3 p-3">
-        <button onClick={downloadTxtFile}>Download MD</button>
+          <button onClick={downloadTxtFile}>Download MD</button>
         </div>
         <div className="  max-w-5xl p-3 border border-black bg-white m-auto">
           <span>
