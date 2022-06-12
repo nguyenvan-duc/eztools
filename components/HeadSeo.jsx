@@ -55,18 +55,19 @@ const HeadSeo = ({ title, desc, img }) => {
         <meta property="og:type" content="article" />
         <meta property="og:type" content="website" />
       </Head>
+      {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
       <Script
         async
-        src="https://www.googletagmanager.com/gtag/js?id=G-DKMZDN7MHZ"
+        src="https://www.googletagmanager.com/gtag/js?id=G-NP7GEDBP6B"
         strategy="afterInteractive"
       />
       <Script id="google-analytics" strategy="afterInteractive">
         {`
-           window.dataLayer = window.dataLayer || [];
-           function gtag(){dataLayer.push(arguments);}
-           gtag('js', new Date());
-         
-           gtag('config', 'G-DKMZDN7MHZ');
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+          
+            gtag('config', 'G-NP7GEDBP6B')
         `}
       </Script>
     </>
