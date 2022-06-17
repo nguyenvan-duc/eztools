@@ -10,6 +10,7 @@ import { SocialButtons } from "../../components/PageComponents/FakeComponnets/So
 import { SAMPLE_CODE } from "../../components/PageComponents/FakeComponnets/CodeEditor";
 import { Spinner } from "@components/PageComponents/FakeComponnets/Spinner";
 import { ActionButton } from "@components/PageComponents/FakeComponnets/ActionButton";
+import HeadSeo from "../../components/HeadSeo";
 const TextEditor = dynamic(import("@components/PageComponents/FakeComponnets/CodeEditor"), {
   ssr: false,
 });
@@ -61,6 +62,8 @@ export default function FakeData() {
 
   return (
     <>
+    {/* @ts-ignore */}
+    <HeadSeo title="Fake Data" />
     <Navbar/>
       <div className="overflow-hidden flex flex-row bg-gray-700">
         <div className="w-2/5">

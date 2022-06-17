@@ -23,7 +23,7 @@ const SecondPercentFormula = () => {
             onChange={(value) => setInputOne(value.target.value)}
             type="number"
             className="w-full  px-3 py-3 border outline-none   border-black"
-            placeholder="Nhập x%"
+            placeholder="Nhập x"
           />
         </div>
         <span className="text-lg mb-3 md:mr-3 md:mb-0">là bao nhiêu % của</span>

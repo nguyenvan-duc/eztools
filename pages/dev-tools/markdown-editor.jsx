@@ -3,7 +3,7 @@ import Navbar from "../../components/DevPageComponents/Navbar";
 import EditorComonent from "../../components/PageComponents/EditorComponent";
 import dynamic from "next/dynamic";
 import { marked } from "marked";
-
+import HeadSeo from "../../components/HeadSeo";
 const MarkdownPreview = dynamic(() => import("@uiw/react-markdown-preview"), {
   ssr: false,
 });
@@ -79,6 +79,7 @@ const Markdowneditor = () => {
   };
   return (
     <>
+      <HeadSeo title="Markdown Editor" />
       <Navbar />
       <div>
         <div className="px-6 h-12 flex items-center">

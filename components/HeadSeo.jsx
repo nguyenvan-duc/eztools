@@ -9,7 +9,7 @@ const HeadSeo = ({ title, desc, img }) => {
   return (
     <>
       <Head>
-        <title>{title}</title>git 
+        <title>{title} - 7TH.DEC</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="description" content={desc} />

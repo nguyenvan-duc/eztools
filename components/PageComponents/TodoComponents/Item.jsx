@@ -60,11 +60,11 @@ const Item = ({
         </div>
       </div>
       <div className="border-t bg-white px-2 ">
-        {!completed && (
+        {/* {!completed && (
           <div className="flex justify-center">
             <button className="my-1 px-2 py-1 border">bắt đầu</button>
           </div>
-        )}
+        )} */}
 
         <div className="w-full flex justify-between px-2 py-1">
           <div className="text-sm text-gray-600">
