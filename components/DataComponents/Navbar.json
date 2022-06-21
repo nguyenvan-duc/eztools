@@ -13,7 +13,7 @@
             "name": "Chuyển ảnh sang văn bản",
             "href":"/image-to-text/",
             "icon": "",
-            "desc":"Công cụ giúp xuất các văn bản trong ảnh, và có thể coppy được."
+            "desc":"Trích xuất văn bản từ các hình ảnh như JPG, PNG."
           }
         ]
       },
