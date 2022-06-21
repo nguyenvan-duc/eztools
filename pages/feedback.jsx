@@ -10,6 +10,7 @@ const Feedback = () => {
    <Layout>
        <div className="text-center w-full max-w-6xl min-h-screen pt-16 lg:pt-28 m-auto">
        <TitlePage>Đóng góp ý kiến</TitlePage>
+       <div className="bg-white border border-black p-3 w-full">
        <DiscussionEmbed
               shortname="cong-cu"
               config={{
@@ -20,6 +21,8 @@ const Feedback = () => {
                 language: "vi", //e.g. for Traditional Chinese (Taiwan)
               }}
             />
+       </div>
+   
        </div>
    </Layout>
    </>
