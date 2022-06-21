@@ -8,10 +8,10 @@ import HeadSeo from "../components/HeadSeo";
 const Percentity = () => {
   return (
     <>
-    <HeadSeo title="Tính giá trị % 📐" img="https://uploads-ssl.webflow.com/612a3d9cd9c35344a2460d68/62a0ba6fd7db9124ba4a0f45_download%20(1).jpeg"/>
+    <HeadSeo title="Tính tỉ lệ % 📐" img="https://uploads-ssl.webflow.com/612a3d9cd9c35344a2460d68/62a0ba6fd7db9124ba4a0f45_download%20(1).jpeg"/>
       <Layout>
         <div className="max-w-4xl m-auto mt-16 ld:mt-20">
-          <TitlePage>Tính giá trị %</TitlePage>
+          <TitlePage>Tính tỉ lệ %</TitlePage>
           <FirstPercentFormula />
           <SecondPercentFormula />
           <ThirdPercentFormula />
