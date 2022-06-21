@@ -1,13 +1,15 @@
 import React from 'react'
 import Layout from "../components/Layout";
 import HeadSeo from "../components/HeadSeo";
+import TitlePage from "../components/PageComponents/TitlePage";
 import { DiscussionEmbed } from "disqus-react";
 const Feedback = () => {
   return (
    <>
    <HeadSeo title="Đóng góp ý kiến 💬"/>
    <Layout>
-       <div className="flex justify-center items-center text-center w-full max-w-6xl min-h-screen pt-16 lg:pt-28">
+       <div className="text-center w-full max-w-6xl min-h-screen pt-16 lg:pt-28 m-auto">
+       <TitlePage>Đóng góp ý kiến</TitlePage>
        <DiscussionEmbed
               shortname="cong-cu"
               config={{
