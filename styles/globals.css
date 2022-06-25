@@ -46,3 +46,7 @@ body{
   .min-h-250{
     min-height: 250px;
   }
+  .react-json-view {
+ 
+    background: none !important;
+  }

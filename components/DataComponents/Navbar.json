@@ -63,6 +63,12 @@
             "href":"/dev-tools/markdown-editor/",
             "icon": "",
             "desc":""
+          },
+          {
+            "name": "Read Json",
+            "href":"/dev-tools/read-json/",
+            "icon": "",
+            "desc":""
           }
         ]
       }
