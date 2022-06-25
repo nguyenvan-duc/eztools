@@ -68,7 +68,7 @@ const ReadJson = () => {
     }
     return (
         <>
-            <HeadSeo title="Read Json" />
+            <HeadSeo title="Read Json" desc="This tool will help you to read files in .json format and can read return urls with json data." />
             <Navbar />
             <Toaster />
             <MobileDisplay>
