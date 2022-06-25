@@ -124,7 +124,7 @@ const ReadJson = () => {
                             displayDataTypes={false}
                             enableClipboard={true}
                             IndentWidth={3}
-                            collapsed={true}
+                            collapsed={1}
                             src={!value ? initialValues : value} theme="summerfruit:inverted" />
                     </div>
                     <Transition appear show={isOpen} as={Fragment}>
