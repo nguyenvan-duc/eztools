@@ -10,7 +10,7 @@
             "desc":"Chức năng như tên."
           },
           {
-            "name": "Chuyển ảnh sang văn bản",
+            "name": "Trích xuất văn bản từ hình ảnh",
             "href":"/image-to-text/",
             "icon": "",
             "desc":"Trích xuất văn bản từ các hình ảnh như JPG, PNG."
