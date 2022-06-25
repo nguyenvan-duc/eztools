@@ -26,16 +26,9 @@ const ReadJson = () => {
     }
     const initialValues = {
 
-        email: "jesse@jesse.com",
-        address: [
-            {
-                street: "",
-                number: 70
-            }
-        ],
-        options: "value 1",
-        radio: "op3",
-        accept: true
+        name: "Read Json",
+        vi:"Xin Chào, Công cụ này sẽ giúp bạn đọc các tệp ở định dạng .json và có thể đọc các url trả về với dữ liệu json.",
+        eng:"Hi there, This tool will help you to read files in .json format and can read return urls with json data.",
     };
     const handleChange = async (event) => {
         if (typeof window !== "undefined") {
