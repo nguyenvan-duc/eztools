@@ -80,7 +80,7 @@ const RemoveBg = () => {
         <HeadSeo title="Xóa nền" />
         <div className="pt-16 lg:pt-28">
           <TitlePage>Xóa Nền</TitlePage>
-          <div className="max-w-lg bg-white p-5 m-auto border border-black">
+          <div className="lg:max-w-lg max-w-7xl  bg-white p-5 m-auto border border-black">
             <label
               htmlFor="file-upload"
               className="relative py-2 px-8  border border-black  bg-white flex justify-center items-center cursor-pointer hover:shadow-blog-l hover:translate-y-blog-4m hover:translate-x-blog-4p  ease-in duration-200"

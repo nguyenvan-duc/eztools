@@ -10,7 +10,7 @@ const Layout = (props) => {
       <div className="flex  flex-no-wrap">
         <Siderbar />
         <div className="bg-codecademy lg:border-l border-black w-full">
-          <div className="container min-h-screen  mx-auto py-10  w-11/12 px-6">
+          <div className=" min-h-screen  mx-auto py-10  w-11/12">
             {props.children}
           </div>  
         </div>
