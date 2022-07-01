@@ -9,15 +9,16 @@ const TextNotes = () => {
   let date = new Date();
   let dateTimeNow = `${date.getDate()}-${
     date.getMonth() + 1
-  }-${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
+  }-${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}`;
 
   React.useEffect(() => {
+    console.log(dateTimeNow)
     if(typeof window !== 'undefined'){
       if(localStorage.getItem('textNotes')){
         setTextNotes(JSON.parse(localStorage.getItem('textNotes')))
       }else{
         let textNotesData =JSON.stringify({
-          date: moment(dateTimeNow).format('DD-MM-YYYY, h:mm a'),
+          date: dateTimeNow,
           textNotes: TextNotes
         })
         localStorage.setItem('textNotes',textNotesData)
@@ -26,7 +27,7 @@ const TextNotes = () => {
   },[]);
   const handleChange = (e) => {
     let textNotesData = JSON.stringify({
-      date:  moment(dateTimeNow).format('DD-MM-YYYY, h:mm a'),
+      date:  dateTimeNow,
       textNotes: e.target.value
     })
     setTextNotes(JSON.parse(textNotesData))
@@ -37,7 +38,7 @@ const TextNotes = () => {
     <HeadSeo title="Ghi Chú 📝" />
       <Layout>
       <TitlePage>Ghi chú văn bản</TitlePage>
-        <div className="  max-w-5xl p-3 border border-black bg-white m-auto">
+        <div className="max-w-6xl p-3 border border-black bg-white m-auto">
         <span>
           Hiện tại:  <Moment format={"DD-MM-YYYY, h:mm:ss a"} interval={1000}/>
             </span>

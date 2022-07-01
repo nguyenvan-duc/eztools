@@ -48,6 +48,7 @@ const ImageToText = () => {
   const [selected, setSelected] = useState(langs[0]);
   const [imagePath, setImagePath] = useState("");
   const [text, setText] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
   const canvasRef = useRef(null);
   const imageRef = useRef(null);
   const worker = createWorker();
@@ -55,7 +56,16 @@ const ImageToText = () => {
     event.preventDefault();
     if (typeof window !== "undefined") {
       if (event.target.files.length !== 0) {
-        setImagePath(window.URL?.createObjectURL(event.target.files[0]));
+        if (!event.target.files[0]) {
+          toast.error("Không có file nào được chọn");
+          return false;
+        }
+        if (!event.target.files[0].name.match(/\.(jpg|jpeg|png)$/)) {
+          toast.error("Chỉ chấp nhận file ảnh");
+          return false;
+        }else{
+          setImagePath(window.URL?.createObjectURL(event.target.files[0]));
+        }
       }
     }
   };
@@ -79,6 +89,7 @@ const ImageToText = () => {
           data: { text },
         } = await worker.recognize(`${dataUrl}`);
         setText(text);
+        setIsLoading(false);
         if (text === "") {
         }
         await worker.terminate();
@@ -92,6 +103,7 @@ const ImageToText = () => {
   };
   const handleClick = (e) => {
     e.preventDefault();
+    setIsLoading(true);
     tesseract();
   };
   function classNames(...classes) {
@@ -221,6 +233,7 @@ const ImageToText = () => {
             </Listbox>
             {imagePath && (
               <button
+              disabled={isLoading}
                 className="px-3 ml-3 py-2 mt-1 bg-white border border-black  hover:shadow-blog-l hover:translate-y-blog-4m hover:translate-x-blog-4p  ease-in duration-200"
                 onClick={handleClick}
               >

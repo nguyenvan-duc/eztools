@@ -5,13 +5,22 @@ const removeImports = require('next-remove-imports')({
 })
 
 module.exports = removeImports({
-  webpack(config, options) {
-
-      return config
+  future: {
+    webpack5: true, // by default, if you customize webpack config, they switch back to version 4. 
+      // Looks like backward compatibility approach.
   },
-  exportTrailingSlash: true,
+  webpack(config, { isServer }) {
+    config.resolve.fallback = { 
+      fs: false,
+      net: false,
+      tls:false
+    };
+   
+    return config
+  },
+  trailingSlash: true,
   images: {
-      loader: 'imgix',
-      path: '',
+    loader: 'imgix',
+    path: '',
   }
 })
